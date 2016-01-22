@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="db2lab6PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>mesitiko.House</class>
+    <class>mesitiko.Broker</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://aetos.it.teithe.gr:5432/db2lab6"/>
+      <property name="javax.persistence.jdbc.password" value="0482"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="db201"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="jdbc:oracle:thin:@195.251.123.227:1521:dblabsPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>mesitiko.Client</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@195.251.123.227:1521:dblabs"/>
+      <property name="javax.persistence.jdbc.password" value="dbuser33954"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.user" value="dblab_151"/>
+    </properties>
+  </persistence-unit>
+</persistence>
